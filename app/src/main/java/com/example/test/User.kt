@@ -19,6 +19,10 @@ data class User(var name: String, var age: Int){
         return age < 4
     }
 
+    fun testGetName(): String {
+        return name
+    }
+
     fun isChild(): Boolean {
         return age < 13
     }

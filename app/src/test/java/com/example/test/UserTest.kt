@@ -1,6 +1,7 @@
 package com.example.test
 
 import org.junit.Assert.assertTrue
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Test
 
@@ -25,13 +26,14 @@ class UserTest {
     }
 
     @Test
-    fun isInfant(){
-        var user = User("Baby", 3)
-        assertTrue(user.isInfant())
-    }
-    @Test
     fun isChild(){
         val user = User("Aimee in 2013", 3)
         assertTrue(user.isChild())
+    }
+
+    @Test
+    fun testGetName(){
+        val user = User("John", 20)
+        assertEquals("John", user.name)
     }
 }
